@@ -9,7 +9,6 @@ from fastapi import Depends, FastAPI, HTTPException
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from pydantic import BaseModel, EmailStr
 from requests_oauthlib import OAuth1
-
 from .auth import create_access_token, get_current_user
 
 app = FastAPI()

@@ -1,0 +1,37 @@
+@backendUrl=http://127.0.0.1:8000
+
+### Get Home
+GET {{backendUrl}}/ HTTP/1.1
+Accept: application/json
+
+### Get Backend Healthz
+GET {{backendUrl}}/healthz HTTP/1.1
+Accept: application/json
+
+### Login User
+# @name userLogin
+POST {{backendUrl}}/login HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "password"
+}
+
+### Get User login token
+@authToken={{userLogin.response.body.access_token}}
+
+### Get Pesapal Iframe
+POST {{backendUrl}}/get-pesapal-iframe/ HTTP/1.1
+Authorization: Bearer {{authToken}}
+Accept: application/json
+Content-Type: application/json
+
+{
+  "amount": "1900",
+  "description": "Small piece of wood purchase.",
+  "email": "hillary.korir@gmail.com",
+  "phone_number": "254700000010",
+  "currency": "KES"
+}

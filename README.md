@@ -39,7 +39,7 @@ The username `admin` and password `password` has been hardcoded to simplify the 
 To Authenticate with the api, use the `/login` endpoint
 
 ```sh
-curl -X POST http://127.0.0.1:7080/login \
+curl -X POST http://127.0.0.1:8000/login \
   -H "Content-Type: application/json" \
   -H "Accept: application/json" \
   -d '{
@@ -60,7 +60,7 @@ You should get a json response like this
 To generate an iframe, use the generated `access_token` in the header like this
 
 ```sh
-curl -X POST http://127.0.0.1:7080/get-pesapal-iframe \
+curl -X POST http://127.0.0.1:8000/get-pesapal-iframe \
   -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTczNjYwNzIzMX0.6ZgNVtWd29r8Kbl-J3Ugp31D7YTvDGR7ipEYMWWQLlM" \
   -H "Content-Type: application/json" \
   -H "Accept: application/json" \

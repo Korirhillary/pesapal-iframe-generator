@@ -20,6 +20,28 @@ Activate the virtual environment
 source .venv/bin/activate
 
 ```
+Install FastAPI
+
+```sh
+pip install fastapi
+
+```
+Install Uvicorn
+```sh
+pip install uvicorn
+
+```
+create a requirements.txt
+```sh
+pip freeze > requirements.txt
+
+```
+
+Install Dependencies
+```sh
+pip install -r requirements.txt
+
+```
 
 In the source directory, run the project using this command. Ensure to export the pesapal merchant consumer key and secret.
 
@@ -27,7 +49,7 @@ In the source directory, run the project using this command. Ensure to export th
 export CONSUMER_KEY="xxxxx"
 export CONSUMER_SECRET="xxx"
 
-uvicorn main:app --reload --port 8000
+uvicorn app.main:app --reload --port 8000
 ```
 
 ## Working with the api

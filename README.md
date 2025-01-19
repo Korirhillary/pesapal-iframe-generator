@@ -20,22 +20,6 @@ Activate the virtual environment
 source .venv/bin/activate
 
 ```
-Install FastAPI
-
-```sh
-pip install fastapi
-
-```
-Install Uvicorn
-```sh
-pip install uvicorn
-
-```
-create a requirements.txt
-```sh
-pip freeze > requirements.txt
-
-```
 
 Install Dependencies
 ```sh
@@ -104,3 +88,6 @@ The response is a json with the generated iframe url, like shown here
 }
 ```
 
+## Docs
+
+The open api spec for the api can be found in the docs endpoint - <http://127.0.0.1:8000/docs>

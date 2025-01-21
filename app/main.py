@@ -15,7 +15,7 @@ app = FastAPI()
 
 CONSUMER_KEY = os.getenv("CONSUMER_KEY")
 CONSUMER_SECRET = os.getenv("CONSUMER_SECRET")
-PESAPAL_IFRAME_URL = "https://www.pesapal.com/API/PostPesapalDirectOrderV4"
+PESAPAL_IFRAME_URL = "https://cybqa.pesapal.com/pesapalv3"
 
 
 class User(BaseModel):
